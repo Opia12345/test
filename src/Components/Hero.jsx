@@ -1,6 +1,7 @@
 import 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container, Button} from 'react-bootstrap'
+import Body from './Body'
 
 
 
@@ -46,6 +47,7 @@ const Hero = () => {
     </Container>
       </div>
 
+    <Body/>
 
     </>
   )

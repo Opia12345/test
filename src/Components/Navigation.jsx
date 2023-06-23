@@ -1,6 +1,6 @@
 import 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.css'
-import { Nav, NavDropdown, Container, Button, Navbar } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Nav, Container, Button, Navbar } from 'react-bootstrap'
 import { useState, useRef, useEffect} from 'react';
 
 const Navigation = () => {
@@ -28,12 +28,16 @@ const Navigation = () => {
       <Navbar.Brand href="#home" className='text-white'>LiteBuds</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="me-auto">
-          <Nav.Link to='/' className='text-white link-info'>Home</Nav.Link>
-          <Nav.Link to='/about' className='text-white link-info'>About</Nav.Link>
-          <Nav.Link to='/contact' className='text-white link-info'>Contact Us</Nav.Link>
-          <Button variant='light'>Sign Up</Button>
+      <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px' }}
+            navbarScroll
+          >
+          <Nav.Link to ='/' className='text-white link-info'>Home</Nav.Link>
+          <Nav.Link to='/shop' className='text-white link-info'>Shop</Nav.Link>
         </Nav>
+
+        <Button variant="light">Sign In</Button>
       </Navbar.Collapse>
     </Container>
   </Navbar>
